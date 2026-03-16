@@ -1,0 +1,19 @@
+aws-terraform-ansible-automation
+│
+├── terraform
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── vpc.tf
+│   ├── ec2.tf
+│   ├── rds.tf
+│   ├── outputs.tf
+│
+├── ansible
+│   ├── inventory.ini
+│   ├── install-nginx.yml
+│
+├── .github
+│   └── workflows
+│       └── deploy.yml
+│
+└── README.md
