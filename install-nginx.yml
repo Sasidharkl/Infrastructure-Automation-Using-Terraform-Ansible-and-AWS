@@ -1,0 +1,21 @@
+---
+- hosts: web
+  become: true
+
+  tasks:
+
+    - name: Install Nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy simple webpage
+      copy:
+        content: "<h1>Infrastructure Automated using Terraform and Ansible</h1>"
+        dest: /usr/share/nginx/html/index.html
